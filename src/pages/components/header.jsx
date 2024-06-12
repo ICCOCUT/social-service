@@ -21,18 +21,18 @@ export default function Header() {
                         <nav aria-label="Global">
                             <ul className="flex items-center gap-6 text-sm">
                                 <li>
-                                    <a
+                                    <Link
                                         className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                                        href="../CostCalculator"
+                                        href="/CostCalculator"
                                     >
                                         Tiempo por Hora
-                                    </a>
+                                    </Link>
                                 </li>
 
                                 <li>
                                     <Link
                                         className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                                        href="#"
+                                        href="/BreakEvenPoint"
                                     >
                                         Punto de Equilibrio
                                     </Link>
