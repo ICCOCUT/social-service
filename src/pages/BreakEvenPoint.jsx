@@ -34,6 +34,16 @@ const BreakEvenPoint = () => {
                 <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="fixedCosts">
                         Costes fijos mensuales
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            className="inline-block w-4 h-4 mr-2 text-blue-500"
+                        >
+                            <path fillRule="evenodd"
+                                  d="M12 2a10 10 0 100 20 10 10 0 000-20zm-.75 6a.75.75 0 011.5 0v1.5a.75.75 0 01-1.5 0V8zm0 4.5a.75.75 0 011.5 0v4.5a.75.75 0 01-1.5 0v-4.5z"
+                                  clipRule="evenodd"/>
+                        </svg>
                     </label>
                     <input
                         type="number"
@@ -47,6 +57,16 @@ const BreakEvenPoint = () => {
                 <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="unitPrice">
                         Precio Unitario
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            className="inline-block w-4 h-4 mr-2 text-blue-500"
+                        >
+                            <path fillRule="evenodd"
+                                  d="M12 2a10 10 0 100 20 10 10 0 000-20zm-.75 6a.75.75 0 011.5 0v1.5a.75.75 0 01-1.5 0V8zm0 4.5a.75.75 0 011.5 0v4.5a.75.75 0 01-1.5 0v-4.5z"
+                                  clipRule="evenodd"/>
+                        </svg>
                     </label>
                     <input
                         type="number"
@@ -54,12 +74,22 @@ const BreakEvenPoint = () => {
                         value={unitPrice}
                         onChange={(e) => setUnitPrice(e.target.value)}
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        placeholder="Introduzca el precio unitarios"
+                        placeholder="Introduzca el precio unitario"
                     />
                 </div>
                 <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="profit">
                         Profit
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            className="inline-block w-4 h-4 mr-2 text-blue-500"
+                        >
+                            <path fillRule="evenodd"
+                                  d="M12 2a10 10 0 100 20 10 10 0 000-20zm-.75 6a.75.75 0 011.5 0v1.5a.75.75 0 01-1.5 0V8zm0 4.5a.75.75 0 011.5 0v4.5a.75.75 0 01-1.5 0v-4.5z"
+                                  clipRule="evenodd"/>
+                        </svg>
                     </label>
                     <input
                         type="number"
