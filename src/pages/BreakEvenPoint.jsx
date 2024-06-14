@@ -6,6 +6,10 @@ const BreakEvenPoint = () => {
     const [profit, setProfit] = useState('');
     const [breakEven, setBreakEven] = useState(null);
     const [errorMessage, setErrorMessage] = useState('');
+    const [hoverFixedCosts, setHoverFixedCosts] = useState(false);
+    const [hoverUnitPrice, setHoverUnitPrice] = useState(false);
+    const [hoverProfit, setHoverProfit] = useState(false);
+    const [hoverBreakEven, setHoverBreakEven] = useState(false);
 
     const calculateBreakEven = () => {
         const fixedCostsValue = parseFloat(fixedCosts);
@@ -30,20 +34,50 @@ const BreakEvenPoint = () => {
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
             <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-                <h2 className="text-2xl font-bold mb-6 text-center text-gray-700">Cálculo del punto de equilibrio</h2>
+                <h2 className="text-2xl font-bold mb-6 text-center text-gray-700 relative">
+                    Cálculo del punto de equilibrio
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        className="inline-block w-4 h-4 ml-2 text-blue-500"
+                        onMouseEnter={() => setHoverBreakEven(true)}
+                        onMouseLeave={() => setHoverBreakEven(false)}
+                    >
+                        <path fillRule="evenodd"
+                              d="M12 2a10 10 0 100 20 10 10 0 000-20zm-.75 6a.75.75 0 011.5 0v1.5a.75.75 0 01-1.5 0V8zm0 4.5a.75.75 0 011.5 0v4.5a.75.75 0 01-1.5 0v-4.5z"
+                              clipRule="evenodd"/>
+                    </svg>
+                    {hoverBreakEven && (
+                        <div
+                            className="absolute bg-white border border-gray-300 p-2 rounded-md shadow-md top-full left-0 mt-1">
+                            <p className="text-xs text-gray-600">Este es el tooltip para Cálculo del punto de
+                                equilibrio.</p>
+                        </div>
+                    )}
+                </h2>
                 <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="fixedCosts">
+                    <label className="block text-gray-700 text-sm font-bold mb-2 relative" htmlFor="fixedCosts">
                         Costes fijos mensuales
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"
                             fill="currentColor"
-                            className="inline-block w-4 h-4 mr-2 text-blue-500"
+                            className="inline-block w-4 h-4 ml-2 text-blue-500"
+                            onMouseEnter={() => setHoverFixedCosts(true)}
+                            onMouseLeave={() => setHoverFixedCosts(false)}
                         >
                             <path fillRule="evenodd"
                                   d="M12 2a10 10 0 100 20 10 10 0 000-20zm-.75 6a.75.75 0 011.5 0v1.5a.75.75 0 01-1.5 0V8zm0 4.5a.75.75 0 011.5 0v4.5a.75.75 0 01-1.5 0v-4.5z"
                                   clipRule="evenodd"/>
                         </svg>
+                        {hoverFixedCosts && (
+                            <div
+                                className="absolute bg-white border border-gray-300 p-2 rounded-md shadow-md top-full left-0 mt-1">
+                                <p className="text-xs text-gray-600">Hola, este es el tooltip para Costes fijos
+                                    mensuales.</p>
+                            </div>
+                        )}
                     </label>
                     <input
                         type="number"
@@ -55,18 +89,26 @@ const BreakEvenPoint = () => {
                     />
                 </div>
                 <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="unitPrice">
+                    <label className="block text-gray-700 text-sm font-bold mb-2 relative" htmlFor="unitPrice">
                         Precio Unitario
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"
                             fill="currentColor"
-                            className="inline-block w-4 h-4 mr-2 text-blue-500"
+                            className="inline-block w-4 h-4 ml-2 text-blue-500"
+                            onMouseEnter={() => setHoverUnitPrice(true)}
+                            onMouseLeave={() => setHoverUnitPrice(false)}
                         >
                             <path fillRule="evenodd"
                                   d="M12 2a10 10 0 100 20 10 10 0 000-20zm-.75 6a.75.75 0 011.5 0v1.5a.75.75 0 01-1.5 0V8zm0 4.5a.75.75 0 011.5 0v4.5a.75.75 0 01-1.5 0v-4.5z"
                                   clipRule="evenodd"/>
                         </svg>
+                        {hoverUnitPrice && (
+                            <div
+                                className="absolute bg-white border border-gray-300 p-2 rounded-md shadow-md top-full left-0 mt-1">
+                                <p className="text-xs text-gray-600">Hola, este es el tooltip para Precio Unitario.</p>
+                            </div>
+                        )}
                     </label>
                     <input
                         type="number"
@@ -78,18 +120,26 @@ const BreakEvenPoint = () => {
                     />
                 </div>
                 <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="profit">
+                    <label className="block text-gray-700 text-sm font-bold mb-2 relative" htmlFor="profit">
                         Profit
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"
                             fill="currentColor"
-                            className="inline-block w-4 h-4 mr-2 text-blue-500"
+                            className="inline-block w-4 h-4 ml-2 text-blue-500"
+                            onMouseEnter={() => setHoverProfit(true)}
+                            onMouseLeave={() => setHoverProfit(false)}
                         >
                             <path fillRule="evenodd"
                                   d="M12 2a10 10 0 100 20 10 10 0 000-20zm-.75 6a.75.75 0 011.5 0v1.5a.75.75 0 01-1.5 0V8zm0 4.5a.75.75 0 011.5 0v4.5a.75.75 0 01-1.5 0v-4.5z"
                                   clipRule="evenodd"/>
                         </svg>
+                        {hoverProfit && (
+                            <div
+                                className="absolute bg-white border border-gray-300 p-2 rounded-md shadow-md top-full left-0 mt-1">
+                                <p className="text-xs text-gray-600">Hola, este es el tooltip para Profit.</p>
+                            </div>
+                        )}
                     </label>
                     <input
                         type="number"
