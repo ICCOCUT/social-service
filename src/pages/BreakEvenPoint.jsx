@@ -51,8 +51,7 @@ const BreakEvenPoint = () => {
                     {hoverBreakEven && (
                         <div
                             className="absolute bg-white border border-gray-300 p-2 rounded-md shadow-md top-full left-0 mt-1">
-                            <p className="text-xs text-gray-600">Este es el tooltip para Cálculo del punto de
-                                equilibrio.</p>
+                            <p className="text-xs text-gray-600">Es cuando los ingresos igualan a los costos totales, sin ganancias ni pérdidas.</p>
                         </div>
                     )}
                 </h2>
@@ -74,8 +73,7 @@ const BreakEvenPoint = () => {
                         {hoverFixedCosts && (
                             <div
                                 className="absolute bg-white border border-gray-300 p-2 rounded-md shadow-md top-full left-0 mt-1">
-                                <p className="text-xs text-gray-600">Hola, este es el tooltip para Costes fijos
-                                    mensuales.</p>
+                                <p className="text-xs text-gray-600">Gastos que no cambian con el nivel de producción.</p>
                             </div>
                         )}
                     </label>
@@ -106,7 +104,7 @@ const BreakEvenPoint = () => {
                         {hoverUnitPrice && (
                             <div
                                 className="absolute bg-white border border-gray-300 p-2 rounded-md shadow-md top-full left-0 mt-1">
-                                <p className="text-xs text-gray-600">Hola, este es el tooltip para Precio Unitario.</p>
+                                <p className="text-xs text-gray-600">Costo por cada unidad de un producto.</p>
                             </div>
                         )}
                     </label>
@@ -137,7 +135,7 @@ const BreakEvenPoint = () => {
                         {hoverProfit && (
                             <div
                                 className="absolute bg-white border border-gray-300 p-2 rounded-md shadow-md top-full left-0 mt-1">
-                                <p className="text-xs text-gray-600">Hola, este es el tooltip para Profit.</p>
+                                <p className="text-xs text-gray-600">Ganancia neta después de restar costos y gastos de los ingresos.</p>
                             </div>
                         )}
                     </label>
