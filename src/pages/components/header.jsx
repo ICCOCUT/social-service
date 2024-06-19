@@ -25,7 +25,7 @@ export default function Header() {
                                         className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
                                         href="/CostCalculator"
                                     >
-                                        Tiempo por Hora
+                                        Calculo del costo por hora
                                     </Link>
                                 </li>
 
@@ -34,7 +34,7 @@ export default function Header() {
                                         className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
                                         href="/BreakEvenPoint"
                                     >
-                                        Punto de Equilibrio
+                                        Calculo del Punto de Equilibrio
                                     </Link>
                                 </li>
                             </ul>

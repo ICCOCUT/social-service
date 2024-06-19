@@ -23,8 +23,7 @@ export default function Content() {
                                 </div>
                                 <h2 className="text-lg text-white font-medium title-font mb-2">Cálculo del costo por
                                     hora</h2>
-                                <p className="leading-relaxed text-base flex-grow">Determina el costo de tu tiempo por hora
-                                    transcurrida.</p>
+                                <p className="leading-relaxed text-base flex-grow">Cuanto vale tu tiempo</p>
                             </div>
                         </Link>
                     </div>
