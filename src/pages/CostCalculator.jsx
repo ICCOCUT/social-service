@@ -45,8 +45,8 @@ const CostoPorHora = () => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-100">
-            <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+        <div className="min-h-screen flex items-center justify-center bg-gray-900">
+            <div className="bg-gray-300 text-gray-700 p-8 rounded-lg shadow-md w-full max-w-md">
                 <h2 className="text-2xl font-bold mb-6 text-center">Calculadora de Costo por Hora</h2>
                 {!gastosFijos && <ExpenseFormPopup onSubmit={handleGastosFijosSubmit} />}
                 <div className="mt-4">
@@ -60,7 +60,7 @@ const CostoPorHora = () => {
                             </p>
                             <button
                                 onClick={calcularCostoPorHora}
-                                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-4"
+                                className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-4"
                             >
                                 Calcular con Porcentajes
                             </button>

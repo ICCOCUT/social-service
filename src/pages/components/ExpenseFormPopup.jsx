@@ -36,8 +36,10 @@ const ExpenseFormPopup = ({ onSubmit }) => {
       {isOpen && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
           <div className="absolute inset-0 bg-gray-900 opacity-50"></div>
-          <div className="bg-white rounded-lg p-8 z-10 max-w-md mx-auto">
-            <h2 className="text-2xl mb-4">Añadir Gastos Fijos</h2>
+          <div className="bg-gray-300 text-gray-700 rounded-lg p-8 z-10 max-w-md mx-auto">
+            <h2 className="text-2xl ">Añadir Gastos Fijos</h2>
+            <p className="text-sm text-gray-600 mb-4">¿Cuánto gastas mensualmente en cada categoría?
+            </p>
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label className="block text-gray-700 mb-2">Renta</label>
@@ -47,7 +49,6 @@ const ExpenseFormPopup = ({ onSubmit }) => {
                   value={fields.renta}
                   onChange={handleChange}
                   className="w-full px-3 py-2 border rounded text-black"
-                  required
                 />
               </div>
               <div className="mb-4">
@@ -58,7 +59,7 @@ const ExpenseFormPopup = ({ onSubmit }) => {
                   value={fields.servicios}
                   onChange={handleChange}
                   className="w-full px-3 py-2 border rounded text-black"
-                  required
+
                 />
               </div>
               <div className="mb-4">
@@ -69,7 +70,6 @@ const ExpenseFormPopup = ({ onSubmit }) => {
                   value={fields.sueldos}
                   onChange={handleChange}
                   className="w-full px-3 py-2 border rounded text-black"
-                  required
                 />
               </div>
               <div className="mb-4">
@@ -80,7 +80,6 @@ const ExpenseFormPopup = ({ onSubmit }) => {
                   value={fields.otros}
                   onChange={handleChange}
                   className="w-full px-3 py-2 border rounded text-black"
-                  required
                 />
               </div>
               <div className="flex justify-end">
