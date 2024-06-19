@@ -26,13 +26,14 @@ const ExpenseFormPopup = ({ onSubmit }) => {
 
   return (
     <div>
-      <button
-        onClick={() => setIsOpen(true)}
-        className="bg-teal-600 text-white px-4 py-2 rounded"
-      >
-        Añadir Gastos Fijos
-      </button>
-
+      <div className='flex justify-center mt-4'>
+        <button
+          onClick={() => setIsOpen(true)}
+          className="bg-teal-600 text-white px-4 py-2 rounded"
+        >
+          Añadir Gastos Fijos
+        </button>
+      </div>
       {isOpen && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
           <div className="absolute inset-0 bg-gray-900 opacity-50"></div>

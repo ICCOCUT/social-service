@@ -44,6 +44,12 @@ const CostoPorHora = () => {
         setCostoPorHora([]); // Reset the results when new fixed costs are submitted
     };
 
+    const resetearDatos = () => {
+        setGastosFijos(null);
+        setCostoPorHora([]);
+        localStorage.removeItem('gastosFijos');
+    };
+
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-900">
             <div className="bg-gray-300 text-gray-700 p-8 rounded-lg shadow-md w-full max-w-md">
@@ -56,14 +62,24 @@ const CostoPorHora = () => {
                             <p className="text-center text-black">Total de gastos fijos: ${gastosFijos.toFixed(2)}</p>
                             <h3 className="text-lg font-bold mb-4 text-center text-black">Costo por Hora (sin porcentaje)</h3>
                             <p className="text-center text-black">
-                                {(gastosFijos / 208).toFixed(2)}
+                                ${(gastosFijos / 208).toFixed(2)}
                             </p>
-                            <button
-                                onClick={calcularCostoPorHora}
-                                className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-4"
-                            >
-                                Calcular con Porcentajes
-                            </button>
+                            <div className="flex justify-center mt-4">
+                                <button
+                                    onClick={calcularCostoPorHora}
+                                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                >
+                                    Calcular con Porcentajes
+                                </button>
+                            </div>
+                            <div className="flex justify-center mt-4">
+                                <button
+                                    onClick={resetearDatos}
+                                    className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                >
+                                    Reiniciar y Borrar Datos
+                                </button>
+                            </div>
                         </div>
                     )}
                     {costoPorHora.length > 0 && (
@@ -72,7 +88,7 @@ const CostoPorHora = () => {
                             <ul className="space-y-2">
                                 {costoPorHora.map((result, index) => (
                                     <li key={index} className="bg-blue-500 text-white p-3 rounded-md shadow-sm">
-                                        <span className="font-semibold">{result.porcentaje}%:</span> ${result.costo}
+                                        <span className="font-semibold">Si agregas un {result.porcentaje}% Tu tiempo valdria esto</span> ${result.costo}
                                     </li>
                                 ))}
                             </ul>
