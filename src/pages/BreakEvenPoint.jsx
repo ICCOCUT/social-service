@@ -32,11 +32,11 @@ const BreakEvenPoint = () => {
                 setErrorMessage('');
             } else {
                 setBreakEven(null);
-                setErrorMessage('Cannot calculate: Unit Price - Profit cannot be zero');
+                setErrorMessage('No se puede calcular: Precio Unitario - Ganancias no pueden ser iguales a cero');
             }
         } else {
             setBreakEven(null);
-            setErrorMessage('Please enter valid numbers for all fields');
+            setErrorMessage('Por favor introduce números validos en todos los campos');
         }
     };
 

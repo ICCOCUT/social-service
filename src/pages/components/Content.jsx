@@ -5,8 +5,7 @@ export default function Content() {
         <section className="text-gray-400 body-font bg-gray-900">
             <div className="container px-5 py-24 mx-auto">
                 <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-                    <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Herramientas
-                        Comerciales</h1>
+                    <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Baluarte, herramientas comerciales</h1>
                     <p>Selecciona la herramienta deseada</p>
                 </div>
                 <div className="flex flex-wrap -m-4">
@@ -16,13 +15,16 @@ export default function Content() {
                                  style={{minHeight: '200px'}}>
                                 <div
                                     className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-indigo-400 mb-4">
-                                    <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"
-                                         strokeWidth="2" className="w-6 h-6" viewBox="0 0 24 24">
-                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="8" r="6"/>
+                                        <path d="M12 8V5m0 3h3"/>
+                                        <rect x="7" y="14" width="10" height="8" rx="1"/>
+                                        <path d="M9 16h2v2H9zm4 0h2v2h-2zm-4 3h2v2H9zm4 0h2v2h-2z"/>
                                     </svg>
+
                                 </div>
                                 <h2 className="text-lg text-white font-medium title-font mb-2">Cálculo del costo por
-                                    hora</h2>
+                                    hora </h2>
                                 <p className="leading-relaxed text-base flex-grow">¿Cuánto vale tu tiempo?</p>
                             </div>
                         </Link>
