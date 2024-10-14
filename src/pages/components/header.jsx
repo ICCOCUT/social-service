@@ -2,11 +2,11 @@ import Link from "next/link";
 
 export default function Header() {
     return (
-        <header className="bg-white dark:bg-gray-900">
+        <header className="bg-gray-900">
             <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
                     <div className="md:flex md:items-center md:gap-12">
-                        <Link className="block text-teal-600 dark:text-teal-600" href="/">
+                        <Link className="block text-teal-600" href="/">
                             <span className="sr-only">Home</span>
                             <svg className="h-8" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path

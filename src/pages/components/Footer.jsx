@@ -4,9 +4,9 @@ import Image from "next/image";
 
 export default function Footer() {
     return (
-        <footer className="bg-gray-100 dark:bg-gray-900">
+        <footer className="bg-gray-900">
             <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
-                <div className="flex justify-center text-teal-600 dark:text-teal-300 space-x-8">
+                <div className="flex justify-center text-teal-300 space-x-8">
                     {/*<Image src="/images/Logotipos/CUT.png" alt="Cut logo" width={300} height={100} />*/}
                     <Image src="/images/Logotipos/DHA.png" alt="DHA logo" width={150} height={100} />
                     {/*<Image src="/images/Logotipos/UDG.png" alt="UDG logo" width={300} height={100} />*/}
