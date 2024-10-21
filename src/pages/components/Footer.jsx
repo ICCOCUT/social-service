@@ -1,15 +1,32 @@
 import Link from "next/link";
 import Image from "next/image";
 
-
 export default function Footer() {
     return (
         <footer className="bg-gray-900">
             <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
-                <div className="flex justify-center text-teal-300 space-x-8">
-                    {/*<Image src="/images/Logotipos/CUT.png" alt="Cut logo" width={300} height={100} />*/}
-                    <Image src="/images/Logotipos/DHA.png" alt="DHA logo" width={150} height={100} />
-                    {/*<Image src="/images/Logotipos/UDG.png" alt="UDG logo" width={300} height={100} />*/}
+                <div className="flex flex-col sm:flex-row justify-center items-center text-teal-300 space-y-4 sm:space-y-0 sm:space-x-8">
+                    <Image
+                        src="/images/Logotipos/UdG.svg"
+                        alt="UDG logo"
+                        width={300}
+                        height={100}
+                        className="w-3/4 sm:w-auto max-w-[150px] h-auto"
+                    />
+                    <Image
+                        src="/images/Logotipos/Cut.svg"
+                        alt="Cut logo"
+                        width={300}
+                        height={100}
+                        className="w-3/4 sm:w-auto max-w-[150px] h-auto"
+                    />
+                    <Image
+                        src="/images/Logotipos/Dha.svg"
+                        alt="DHA logo"
+                        width={150}
+                        height={100}
+                        className="w-3/4 sm:w-auto max-w-[60px] h-auto"
+                    />
                 </div>
                 <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
                     <li>
@@ -21,9 +38,7 @@ export default function Footer() {
                         </Link>
                     </li>
                 </ul>
-
             </div>
         </footer>
     );
-
 }

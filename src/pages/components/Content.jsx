@@ -5,11 +5,12 @@ export default function Content() {
         <section className="text-gray-400 body-font bg-gray-900">
             <div className="container px-5 py-24 mx-auto">
                 <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-                    <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Baluarte, herramientas comerciales</h1>
+                    <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Baluarte, herramientas
+                        comerciales</h1>
                     <p>Selecciona la herramienta deseada</p>
                 </div>
                 <div className="flex flex-wrap -m-4">
-                    <div className="xl:w-1/3 md:w-1/2 p-4 flex flex-col">
+                    <div className="xl:w-1/3 md:w-1/2 w-full p-4 flex flex-col">
                         <Link href="/CostCalculator">
                             <div className="border border-gray-700 border-opacity-75 p-6 rounded-lg flex-grow"
                                  style={{minHeight: '200px'}}>
@@ -21,7 +22,6 @@ export default function Content() {
                                         <rect x="7" y="14" width="10" height="8" rx="1"/>
                                         <path d="M9 16h2v2H9zm4 0h2v2h-2zm-4 3h2v2H9zm4 0h2v2h-2z"/>
                                     </svg>
-
                                 </div>
                                 <h2 className="text-lg text-white font-medium title-font mb-2">Cálculo del costo por
                                     hora </h2>
@@ -29,7 +29,7 @@ export default function Content() {
                             </div>
                         </Link>
                     </div>
-                    <div className="xl:w-1/3 md:w-1/2 p-4 flex flex-col">
+                    <div className="xl:w-1/3 md:w-1/2 w-full p-4 flex flex-col">
                         <Link href="/BreakEvenPoint">
                             <div className="border border-gray-700 border-opacity-75 p-6 rounded-lg flex-grow"
                                  style={{minHeight: '200px'}}>
@@ -45,13 +45,12 @@ export default function Content() {
                                 <h2 className="text-lg text-white font-medium title-font mb-2">Cálculo del punto de
                                     equilibrio</h2>
                                 <p className="leading-relaxed text-base flex-grow">Cuánto tengo que producir y vender
-                                    para
-                                    solventar mi estilo de vida.</p>
+                                    para solventar mi estilo de vida.</p>
                             </div>
                         </Link>
                     </div>
-                    <div className="xl:w-1/3 md:w-1/2 p-4 flex flex-col">
-                    <div className="border border-gray-700 border-opacity-75 p-6 rounded-lg flex-grow"
+                    <div className="xl:w-1/3 md:w-1/2 w-full p-4 flex flex-col">
+                        <div className="border border-gray-700 border-opacity-75 p-6 rounded-lg flex-grow"
                              style={{minHeight: '200px'}}>
                             <div
                                 className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-indigo-400 mb-4">
@@ -62,8 +61,8 @@ export default function Content() {
                                 </svg>
                             </div>
                             <h2 className="text-lg text-white font-medium title-font mb-2">Neptune</h2>
-                            <p className="leading-relaxed text-base flex-grow">Fingerstache flexitarian street art 8-bit waist co,
-                                subway tile poke farm.</p>
+                            <p className="leading-relaxed text-base flex-grow">Fingerstache flexitarian street art 8-bit
+                                waist co, subway tile poke farm.</p>
                         </div>
                     </div>
                 </div>
