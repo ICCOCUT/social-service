@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Content() {
     return (
-        <section className="text-gray-400 body-font bg-gray-900">
+        <section className="text-gray-400 body-font bg-gray-900 min-h-screen flex flex-col justify-between">
             <div className="container px-5 py-24 mx-auto">
                 <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
                     <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Baluarte, herramientas
@@ -50,22 +50,27 @@ export default function Content() {
                         </Link>
                     </div>
                     <div className="xl:w-1/3 md:w-1/2 w-full p-4 flex flex-col">
-                        <div className="border border-gray-700 border-opacity-75 p-6 rounded-lg flex-grow"
-                             style={{minHeight: '200px'}}>
-                            <div
-                                className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-indigo-400 mb-4">
-                                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"
-                                     strokeWidth="2" className="w-6 h-6" viewBox="0 0 24 24">
-                                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                                    <circle cx="12" cy="7" r="4"></circle>
-                                </svg>
+                        <Link href="/ProductPrice">
+                            <div className="border border-gray-700 border-opacity-75 p-6 rounded-lg flex-grow"
+                                 style={{minHeight: '200px'}}>
+                                <div
+                                    className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-indigo-400 mb-4">
+                                    <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"
+                                         strokeWidth="2" className="w-6 h-6" viewBox="0 0 24 24">
+                                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                </div>
+                                <h2 className="text-lg text-white font-medium title-font mb-2">Cálculo del precio de
+                                    tu producto
+                                </h2>
+                                <p className="leading-relaxed text-base flex-grow">¿Cuánto vale tu producto?
+                                </p>
                             </div>
-                            <h2 className="text-lg text-white font-medium title-font mb-2">Neptune</h2>
-                            <p className="leading-relaxed text-base flex-grow">Fingerstache flexitarian street art 8-bit
-                                waist co, subway tile poke farm.</p>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </div>
-        </section>);
+        </section>
+    );
 }

@@ -5,7 +5,8 @@ export default function Footer() {
     return (
         <footer className="bg-gray-900">
             <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
-                <div className="flex flex-col sm:flex-row justify-center items-center text-teal-300 space-y-4 sm:space-y-0 sm:space-x-8">
+                <div
+                    className="flex flex-col sm:flex-row justify-center items-center text-teal-300 space-y-4 sm:space-y-0 sm:space-x-8">
                     <Image
                         src="/images/Logotipos/UdG.svg"
                         alt="UDG logo"

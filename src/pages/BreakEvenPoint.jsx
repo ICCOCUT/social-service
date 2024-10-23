@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import ExpenseFormPopup from './components/ExpenseFormPopup';
-import { MathJax, MathJaxContext } from 'better-react-mathjax';
+import {MathJax, MathJaxContext} from 'better-react-mathjax';
+import ResetButton from "./components/ResetButton";
 
 const BreakEvenPoint = () => {
     const [fixedCosts, setFixedCosts] = useState(null);
@@ -8,7 +9,6 @@ const BreakEvenPoint = () => {
     const [profit, setProfit] = useState('');
     const [breakEven, setBreakEven] = useState(null);
     const [errorMessage, setErrorMessage] = useState('');
-    const [hoverFixedCosts, setHoverFixedCosts] = useState(false);
     const [hoverUnitPrice, setHoverUnitPrice] = useState(false);
     const [hoverProfit, setHoverProfit] = useState(false);
     const [hoverBreakEven, setHoverBreakEven] = useState(false);
@@ -185,14 +185,7 @@ const BreakEvenPoint = () => {
                                 </MathJax>
                             </div>
                             {/* Botón de reiniciar */}
-                            <div className="flex justify-center mt-4">
-                                <button
-                                    onClick={resetData}
-                                    className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                                >
-                                    Reiniciar y Borrar Datos
-                                </button>
-                            </div>
+                            <ResetButton resetData={resetData}/>
                         </>
                     )}
 

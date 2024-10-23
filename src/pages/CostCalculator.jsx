@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ExpenseFormPopup from './components/ExpenseFormPopup';
+import ResetButton from "./components/ResetButton";
 import { MathJax, MathJaxContext } from 'better-react-mathjax';
 
 const CostoPorHora = () => {
@@ -22,7 +23,7 @@ const CostoPorHora = () => {
     }, [isClient]);
 
     useEffect(() => {
-        if (gastosFijos !== null && isClient) {
+        if (gastosFijos !== null && !isNaN(gastosFijos)) {
             localStorage.setItem('gastosFijos', JSON.stringify(gastosFijos));
             calcularCostoPorHora();
         }
@@ -62,7 +63,10 @@ const CostoPorHora = () => {
                             <div>
                                 <h3 className="text-lg font-bold mb-4 text-center">Gastos Fijos</h3>
                                 <p className="text-center">
-                                    Total de gastos fijos: ${gastosFijos.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                                    Total de gastos fijos: ${gastosFijos.toLocaleString(undefined, {
+                                    minimumFractionDigits: 2,
+                                    maximumFractionDigits: 2
+                                })}
                                 </p>
                                 <h3 className="text-lg font-bold mb-4 text-center">Costo por Hora (sin Ganancia)</h3>
                                 <p className="text-center">
@@ -81,20 +85,14 @@ const CostoPorHora = () => {
                                     ))}
                                 </ul>
                                 {/* Añadir la fórmula con MathJax */}
-                                <div className="bg-gray-700 text-center text-white font-mono p-3 my-4 rounded-md shadow-md overflow-x-auto whitespace-nowrap">
+                                <div
+                                    className="bg-gray-700 text-center text-white font-mono p-3 my-4 rounded-md shadow-md overflow-x-auto whitespace-nowrap">
                                     <p className="text-lg font-bold mb-2">La fórmula para realizar este cálculo es:</p>
                                     <MathJax>
                                         {`\\[ \\text{Costo por hora} = \\frac{\\text{Gastos Fijos} + \\text{Porcentaje de Ganancia}}{208} \\]`}
                                     </MathJax>
                                 </div>
-                                <div className="flex justify-center mt-4">
-                                    <button
-                                        onClick={resetearDatos}
-                                        className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                                    >
-                                        Reiniciar y Borrar Datos
-                                    </button>
-                                </div>
+                                <ResetButton resetData={resetearDatos} />
                             </div>
                         )}
                     </div>
