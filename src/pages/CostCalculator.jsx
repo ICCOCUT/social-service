@@ -87,10 +87,12 @@ const CostoPorHora = () => {
                                 {/* Añadir la fórmula con MathJax */}
                                 <div
                                     className="bg-gray-700 text-center text-white font-mono p-3 my-4 rounded-md shadow-md overflow-x-auto whitespace-nowrap">
-                                    <p className="text-lg font-bold mb-2">La fórmula para realizar este cálculo es:</p>
-                                    <MathJax>
-                                        {`\\[ \\text{Costo por hora} = \\frac{\\text{Gastos Fijos} + \\text{Porcentaje de Ganancia}}{208} \\]`}
-                                    </MathJax>
+                                    <p className="font-bold mb-2">La fórmula para realizar este cálculo es:</p>
+                                    <div className="text-xs">
+                                        <MathJax>
+                                            {`\\[ \\text{Costo por hora} = \\frac{\\text{Gastos Fijos} + \\text{Porcentaje de Ganancia}}{208} \\]`}
+                                        </MathJax>
+                                    </div>
                                 </div>
                                 <ResetButton resetData={resetearDatos} />
                             </div>

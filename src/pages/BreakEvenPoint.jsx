@@ -193,8 +193,8 @@ const BreakEvenPoint = () => {
                             {/* Mostrar la fórmula usando MathJax */}
                             <div
                                 className="bg-gray-700 text-center text-white font-mono p-3 my-4 rounded-md shadow-md overflow-x-auto">
-                                <p className="text-lg font-bold mb-2">La fórmula para realizar este cálculo es:</p>
-                                <MathJax className="text-sm md:text-base">
+                                <p className="font-bold mb-2">La fórmula para realizar este cálculo es:</p>
+                                <MathJax className="text-xs">
                                     {`\\[ \\text{Punto de equilibrio} = \\frac{\\text{Gastos Fijos Mensuales}}{\\text{Precio Unitario} - \\text{Ganancias}} \\]`}
                                 </MathJax>
                             </div>
