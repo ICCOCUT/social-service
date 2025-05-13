@@ -80,7 +80,7 @@ const CostoPorHora = () => {
                                 <ul className="space-y-2">
                                     {costoPorHora.map((result, index) => (
                                         <li key={index} className="bg-blue-500 text-white p-3 rounded-md shadow-sm">
-                                            <span className="font-semibold">Si agregas un {result.porcentaje}% tu tiempo valdría esto</span> ${result.costo}
+                                            <span className="font-semibold">Si agregas un {Number(result.porcentaje).toLocaleString()}% tu tiempo valdría esto</span> ${Number(result.costo).toLocaleString()}
                                         </li>
                                     ))}
                                 </ul>

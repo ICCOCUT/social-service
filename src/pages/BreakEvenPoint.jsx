@@ -14,11 +14,17 @@ const BreakEvenPoint = () => {
     const [hoverBreakEven, setHoverBreakEven] = useState(false);
 
     useEffect(() => {
+        const storedFixedCosts = localStorage.getItem('fixedCosts');
+        const storedUnitPrice = localStorage.getItem('unitPrice');
+        const storedProfit = localStorage.getItem('profit');
         const storedBreakEven = localStorage.getItem('breakEven');
-        if (storedBreakEven) {
-            setBreakEven(storedBreakEven);
-        }
+    
+        if (storedFixedCosts) setFixedCosts(parseFloat(storedFixedCosts));
+        if (storedUnitPrice) setUnitPrice(storedUnitPrice); // sigue como string para input
+        if (storedProfit) setProfit(storedProfit); // sigue como string para input
+        if (storedBreakEven) setBreakEven(storedBreakEven);
     }, []);
+    
 
     const calculateBreakEven = () => {
         const fixedCostsValue = parseFloat(fixedCosts);
@@ -29,6 +35,9 @@ const BreakEvenPoint = () => {
             if (unitPriceValue - profitValue !== 0) {
                 const breakEvenPoint = fixedCostsValue / (unitPriceValue - profitValue);
                 setBreakEven(breakEvenPoint.toFixed(2));
+                localStorage.setItem('fixedCosts', fixedCosts);
+                localStorage.setItem('unitPrice', unitPrice);
+                localStorage.setItem('profit', profit);
                 localStorage.setItem('breakEven', breakEvenPoint.toFixed(2));
                 setErrorMessage('');
             } else {
@@ -51,8 +60,13 @@ const BreakEvenPoint = () => {
         setProfit('');
         setBreakEven(null);
         setErrorMessage('');
+        localStorage.removeItem('fixedCosts');
+        localStorage.removeItem('unitPrice');
+        localStorage.removeItem('profit');
         localStorage.removeItem('breakEven');
+
     };
+    let calc = fixedCosts / unitPrice;
 
     return (
         <MathJaxContext>
@@ -167,13 +181,13 @@ const BreakEvenPoint = () => {
                     {breakEven && (
                         <>
                             <div className="mt-4 p-4 bg-green-100 text-green-700 rounded text-center">
-                                <p>Necesitas producir y vender {breakEven} unidades de tu producto o servicio.</p>
+                                <p>Necesitas producir y vender {(breakEven)} unidades de tu producto o servicio.</p>
                             </div>
                             <div className="mt-4 p-4 bg-green-100 text-green-700 rounded text-center">
-                                <p>Si lo logras, tus ventas mensuales serán de ${unitPrice * breakEven} mensuales.</p>
+                                <p>Si lo logras, tus ventas mensuales serán de ${Number(unitPrice * breakEven).toLocaleString()} mensuales.</p>
                             </div>
                             <div className="mt-4 p-4 bg-green-100 text-green-700 rounded text-center">
-                                <p>A partir de la unidad {fixedCosts / unitPrice} comienzas a tener ganancias.</p>
+                                <p>A partir de la unidad {Number((fixedCosts / unitPrice).toFixed(2)).toLocaleString()} comienzas a tener ganancias.</p>
                             </div>
 
                             {/* Mostrar la fórmula usando MathJax */}
