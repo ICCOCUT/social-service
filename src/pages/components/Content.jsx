@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function Content() {
     return (
-        <section className="text-gray-400 body-font bg-gray-900 min-h-screen flex flex-col justify-between">
-            <div className="container px-5 py-24 mx-auto">
-                <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+        <section className="text-gray-400 body-font bg-gray-900 flex flex-col flex-grow">
+            <div className="container px-5 pt-5  mx-auto">
+                <div className="flex flex-wrap w-full mb-10 flex-col items-center text-center">
                     <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Baluarte, herramientas
                         comerciales</h1>
                     <p>Selecciona la herramienta deseada</p>

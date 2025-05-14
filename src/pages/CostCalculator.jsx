@@ -54,7 +54,7 @@ const CostoPorHora = () => {
 
     return (
         <MathJaxContext>
-            <div className="min-h-screen flex items-center justify-center bg-gray-900">
+            <div className="flex items-center justify-center bg-gray-900">
                 <div className="bg-gray-600 text-gray-200 p-8 rounded-lg shadow-md w-full max-w-md">
                     <h2 className="text-2xl font-bold mb-6 text-center">¿Cuánto vale tu tiempo?</h2>
                     {!gastosFijos && <ExpenseFormPopup onSubmit={handleGastosFijosSubmit} />}

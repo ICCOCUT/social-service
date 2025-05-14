@@ -20,7 +20,7 @@ export default function Footer() {
                     <Image
                         src="/images/Logotipos/UdG.svg"
                         alt="UDG logo"
-                        width={300}
+                        width={250}
                         height={100}
                         className="w-3/4 sm:w-auto max-w-[150px] h-auto"
                     />

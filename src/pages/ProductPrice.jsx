@@ -96,7 +96,7 @@ const ProductPrice = () => {
 
     return (
         <MathJaxContext>
-            <div className="min-h-screen flex items-center justify-center bg-gray-900">
+            <div className="flex items-center justify-center bg-gray-900">
                 <div className="p-8 rounded-lg shadow-md w-full max-w-md bg-gray-600 text-gray-200">
                     <h2 className="text-2xl font-bold mb-6 text-center relative">
                         Cálculo del precio de tu producto
